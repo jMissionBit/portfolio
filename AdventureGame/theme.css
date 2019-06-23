@@ -1,0 +1,11 @@
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fontTwo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+}
+.grid-container {
+    display: grid;
+    grid-auto-columns: 50px;
+  }
