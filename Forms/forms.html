@@ -1,14 +1,67 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    
+
+<title>Forms</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <form>
-        <input type="text" placeholder="first name">
-        
+<h1>Register</h1>
+<form>
+    <label for="firstname">First Name:</label>
+    <input id="firstname" type="text" placeholder="John" required>
+    <label for="lastname">Last Name:</label>
+    <input id="lastname" type="text" placeholder="Smith" required>
+    <br>
 
-    </form>
+    <label for="male">Male</label>
+    <input name="gender" id="male" type="radio" value="MALE">
+    <label for="cats">Female</label>
+    <input name="gender" id="female" type="radio" value="FEMALE">
+    <label for="other">Other</label>
+    <input name="gender" id="other" type="radio" value="OTHER">
+    <br>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" placeholder="your email" required>
+    <label for="password">Password:</label>
+    <input id="password" type="password" placeholder="your password" pattern=".{5,10}">
+    <br>
+
+    <label for="Birthday">Birthday:</label>
+    <select name = "Month">
+        <option>Month</option>
+        <option>Jan</option>
+        <option>Feb</option>
+        <option>Mar</option>
+    </select>
+
+    <select name= "Day">
+        <option>Day</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+
+    <select name= "Year">
+        <option>Year</option>
+        <option>1997</option>
+        <option>1996</option>
+        <option>1995</option>
+    </select>
+    <br>
+
+    <label for="terms">I agree to the terms and conditions</label>
+    <input name="Terms" id="terms" type="radio" value="TERM">
+    <br>
+
+    <input type="submit">
+
+</form>
+
 
 </body>
+
 </html>
