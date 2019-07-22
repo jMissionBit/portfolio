@@ -13,6 +13,7 @@ function play(id, index) {
     id.style.backgroundColor = "blue";
     board[index] = "blue";
     turn = "Gray";
+    id.innerHTML = "board["+ index +  "] " + board[index];
     document.querySelector('#turnOrder').innerHTML = "Turn: " + turn;
   }  
   else if (turn == "Gray" && id.style.backgroundColor != "gray" && id.style.backgroundColor != "blue" ){
@@ -22,4 +23,10 @@ function play(id, index) {
     document.querySelector('#turnOrder').innerHTML = "Turn: " + turn;
   }
   console.log(board);
+  checkwin();
+}
+function checkwin() {
+  if (board[0] == board[1] && board[1] == board[2] ) {
+    console.log("you win");
+  }
 }
