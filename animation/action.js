@@ -1,4 +1,4 @@
-
+/*
 // Create a circle shaped path with its center at the center
 // of the view and a radius of 50:
 var circle = new Path.Circle({
@@ -35,8 +35,8 @@ var path = new Path.Rectangle({
 
 })
 
+*/
 
-/*
 // The amount of circles we want to make:
 var count = 150;
 
@@ -44,7 +44,8 @@ var count = 150;
 var path = new Path.Circle({
 	center: [0, 0],
 	radius: 10,
-	fillColor: 'white',
+	var r = Math.random(),
+	fillColor: 'blue',
 	strokeColor: 'black'
 });
 
@@ -54,8 +55,12 @@ var symbol = new Symbol(path);
 for (var i = 0; i < count; i++) {
 	// The center position is a random point in the view:
 	var center = Point.random() * view.size;
+	// placing the symbol at the random point we made
 	var placedSymbol = symbol.place(center);
-	placedSymbol.scale(i / count);
+	if (i % 2 == 0 ) {
+		symbol.fillColor = 'red';
+	}
+	placedSymbol.scale(i / 50);
 }
 
 // The onFrame function is called up to 60 times a second:
@@ -67,12 +72,12 @@ function onFrame(event) {
 		
 		// Move the item 1/20th of its width to the right. This way
 		// larger circles move faster than smaller circles:
-		item.position.x += item.bounds.width / 20;
+		item.position.y += item.bounds.height / 20;
 
 		// If the item has left the view on the right, move it back
 		// to the left:
-		if (item.bounds.left > view.size.width) {
-			item.position.x = -item.bounds.width;
+		if (item.bounds.top > view.size.height) {
+			item.position.y = -item.bounds.height;
 		}
 	}
-} */
+} 
